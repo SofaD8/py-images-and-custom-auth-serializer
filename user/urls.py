@@ -1,6 +1,6 @@
 from django.conf.urls.static import static
 from django.urls import path
-from rest_framework import settings
+from django.conf import settings
 
 from user.views import (
     CreateUserView,
