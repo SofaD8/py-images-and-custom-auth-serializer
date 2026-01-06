@@ -1,12 +1,11 @@
-from django.conf.urls.static import static
 from django.urls import path
-from django.conf import settings
 
 from user.views import (
     CreateUserView,
     CreateTokenView,
     ManageUserView
 )
+
 
 app_name = "user"
 
@@ -26,4 +25,4 @@ urlpatterns = [
         ManageUserView.as_view(),
         name="manage"
     ),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
