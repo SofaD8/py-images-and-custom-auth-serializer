@@ -6,10 +6,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/cinema/", include(
-        "cinema.urls", namespace="cinema")
-         ),
-    path("api/user/", include(
-        "user.urls", namespace="user")
-         ),
+    path(
+        "api/cinema/",
+        include("cinema.urls", namespace="cinema")
+    ),
+    path(
+        "api/user/",
+        include("user.urls", namespace="user")
+    ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
